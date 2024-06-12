@@ -1,0 +1,17 @@
+{
+  "root": {
+    "password": "123456",
+    "state": 0,
+    "flag": 0
+  },
+  "admin": {
+    "password": "000000",
+    "state": 0,
+    "flag": 0
+  },
+  "2431242530": {
+    "password": "123456",
+    "state": 0,
+    "flag": 0
+  }
+}

@@ -1,0 +1,3 @@
+获取哔哩哔哩的cookies的方法。
+第一步登录自己的账号
+第二步按F12找到console或者控制台在下面输入document.cookie复制结果到static中的cookies.txt中

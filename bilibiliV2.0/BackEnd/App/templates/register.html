@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <!-- 选用改动css文件路径 -->
+    
+<!--    <link rel="stylesheet" href="../static/css/register.css">  &lt;!&ndash; 测试环境 &ndash;&gt;-->
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">  <!--生产环境-->
+</head>
+<body>
+<form id="regfrom" name="regfrom" action="http://127.0.0.1:5000/users/checkstate" method="post">
+    <table>
+        <thead>
+            <th colspan="2">欢迎注册</th>
+        </thead>
+            
+        <tbody>
+            <tr>
+                <td><div>昵称：</div><input type="text" name="showname" id="showname"></td>
+            </tr>
+            <tr>
+                <td><div>用户名:</div><input type="text" name="username" id="username"></td>
+            </tr>
+            <tr>
+                <td><div>密码:</div><input type="password" name="pwd" id="pwd"></td>
+            </tr>
+            <tr>
+                <td><div>确认密码:</div><input type="password" name="entrypwd" id="entrypwd"></td>
+            </tr>
+        </tbody>
+
+
+        <tr>
+            <td>
+                <input type="button" value="注册" onclick="register()">
+            </td>
+        </tr>
+    </table>
+</form>
+<script>
+function register() {
+    let showname = document.getElementById('showname').value.trim();
+    let username = document.getElementById('username').value.trim();
+    let pwd = document.getElementById('pwd').value;
+    let entrypwd = document.getElementById('entrypwd').value;
+
+    if (showname === "" || username === "" || pwd === "" || entrypwd === "") {
+        alert('有未填写的项，请填写！！！');
+        return;
+    }
+
+    if (pwd !== entrypwd) {
+        alert('两次输入的密码不正确');
+        return;
+    }
+
+    // 使用fetch发送POST请求
+    fetch('http://127.0.0.1:5000/users/checkstate', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({username: username, pwd: pwd}),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data.state === 0) {
+            alert(data.message); // 用户名已存在
+        } else if (data.state === 1) {
+            alert(data.message); // 成功
+            // 这里可以添加成功后的处理逻辑，比如跳转到登录页面
+            window.location.href = '/'
+        }
+    })
+    .catch(error => {
+        console.error('There has been a problem with your fetch operation:', error);
+    });
+}
+</script>
+</body>
+</html>

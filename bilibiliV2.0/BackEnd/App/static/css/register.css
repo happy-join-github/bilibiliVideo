@@ -1,0 +1,55 @@
+body{
+    width: 1680px;
+    height: 648px;
+    background-image: url('../imgs/pexels-photo-1006121.jpeg');
+    background-repeat: no-repeat;
+    background-size: 1708px 818px;
+}
+
+form{
+    width: 600px;
+    height: 400px;
+    float: left;
+    position: absolute;
+    margin: 230px 540px;
+    background-color: deepskyblue;
+}
+
+form table{
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    font-size: 20px;
+}
+
+form table thead {
+    text-align: center;
+}
+
+
+form table tbody td{
+    column-span: 2;
+}
+form table tbody div{
+    margin-left: 150px;
+    font-size: 20px;
+    color:lightseagreen;
+    font-weight: 700;
+}
+form table tr td div{
+    float: left;
+    width: 86px;
+    height: 27px;
+    margin-right: 40px;
+}
+
+input[type="button"]{
+    width: 100px;
+    height: 30px;
+    background-color: lightseagreen;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 240px;
+}

@@ -1,0 +1,68 @@
+body{
+    width: 1680px;
+    height: 648px;
+    background-image: url('../imgs/login.webp');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#login{
+    width: 600px;
+    height: 400px;
+    float: left;
+    position: relative;
+    top: 30%;
+    left: 30%;
+    background: #ffffff9e;
+}
+form  .title{
+    color: cornflowerblue;
+    font-size: 25;
+    margin-left: 40%;
+}
+form .info{
+    width: 400px;
+    height: 200px;
+    margin:75px auto;
+    padding-left: 25px;
+    padding-top: 25px;
+    background-color: rgba(245, 245, 245, 0.169);
+}
+form .info .user{
+    width: 400px;
+    height: 50px;
+    /* margin-bottom: 35px; */
+}
+form .info .user span{
+    font-size: 25;
+    font-weight: 700;
+    color:greenyellow;
+    margin-right: 30px;
+}
+form .info .pwd{
+    width: 400px;
+    height: 50px;
+    margin: 25px auto;
+}
+form .info .pwd span{
+    font-size: 25;
+    font-weight: 700;
+    color:greenyellow;
+    margin-right: 55px;
+}
+form .info .bth{
+    width: 300px;
+    height: 45px;
+    margin: 0 auto;
+}
+form .info .bth input{
+    width: 85px;
+    height: 35px;
+    float:left;
+    margin-right:85px;
+    color: hotpink;
+    font-weight: 700;
+    font-size: 20px;
+}
+form .info .bth input:nth-child(2){
+    margin-right: 0;
+}
