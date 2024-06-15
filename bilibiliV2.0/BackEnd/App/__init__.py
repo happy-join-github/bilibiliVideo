@@ -1,6 +1,7 @@
 from flask import Flask
 from .config import Conf
-from .views import routes,user_route
+from .views import routes
+from .models import user_route
 import json
 import os
 
