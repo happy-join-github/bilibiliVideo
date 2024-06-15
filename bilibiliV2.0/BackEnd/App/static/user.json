@@ -2,16 +2,37 @@
   "root": {
     "password": "123456",
     "state": 0,
-    "flag": 0
+    "flag": 0,
+    "nickname": "root"
   },
   "admin": {
     "password": "000000",
     "state": 0,
-    "flag": 0
+    "flag": 0,
+    "nickname": "admin"
   },
   "2431242530": {
     "password": "123456",
     "state": 0,
-    "flag": 0
+    "flag": 0,
+    "nickname": "小熊"
+  },
+  "243152462": {
+    "password": "123456",
+    "state": 0,
+    "flag": 0,
+    "nickname": "小二"
+  },
+  "254612563": {
+    "password": "123456",
+    "state": 0,
+    "flag": 0,
+    "nickname": "张三"
+  },
+  "13789892497": {
+    "password": "Lbq230524",
+    "state": 0,
+    "flag": 0,
+    "nickname": "固所"
   }
 }
