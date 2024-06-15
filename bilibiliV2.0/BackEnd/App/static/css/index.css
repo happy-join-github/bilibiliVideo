@@ -1,0 +1,106 @@
+body {
+    width: 1670px;
+    height: 1000px;
+    background-color: aliceblue;
+ }
+ a {
+     color: #000;
+     text-decoration: none;
+     float: right;
+ }
+ .scroll-text {
+     width: 300px;
+     height: 100px;
+     margin: 0 auto;
+     font-size: 20px;
+     font-weight: 700;
+     text-align: center;
+     line-height: 100px;
+     color: #fff;
+     background-color: #000;
+     border-radius: 10px;
+ }
+ .videoUrl{
+     width:800px;
+     height: 150px;
+     margin:20px auto;
+     text-align:center;
+     line-height:200px;
+     color:#ff00ff;
+     border:1px solid black;
+     border-radius:10px;
+ }
+ .videoUrl span{
+    float: left;
+    margin-left: 60px;
+    margin-top: -23px;
+ }
+ .videoUrl textarea{
+    width: 600px;
+    height: 120px;
+    margin: 14px auto 0;
+    resize:none;
+ }
+
+ .cookies{
+    width: 800px;
+    height: 220px;
+    margin: 10px auto 0;
+    line-height: 220px;
+    color: #ff00ff;
+    border: 1px solid black;
+    border-radius: 10px;
+ }
+ .cookies #cookiescontent{
+   resize: none;
+   text-align: center;
+   margin: 25px 10px 0;
+ }
+
+ .state{
+   width: 800px;
+   height: 200px;
+   margin: 10px auto;
+   line-height: 200px;
+   color: #ff00ff;
+   border: 1px solid black;
+   border-radius: 10px;
+}
+
+.state .stateCode,.state .explainCode{
+   display: inline-block;
+   width: 300px;
+   height: 120px;
+   text-align: center;
+   line-height: 100px;
+   color: #fff;
+   border-radius: 10px;
+   background-color: #000;
+}
+.state .stateCode{
+   margin-left: 20px;
+   margin-right: 40px;
+}
+.state #request{
+   margin-left: 30px;
+}
+.DownloadSection{
+    width: 800px;
+    height: 200px;
+    margin: 10px auto;
+    text-align: center;
+    line-height: 200px;
+    color: #ff00ff;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.footer{
+   width: 800px;
+   height: 60px;
+   margin: 10px auto;
+   text-align: center;
+}
+.footer p{
+   margin: 40px auto 0;
+   color: #ff00ff;
+}
