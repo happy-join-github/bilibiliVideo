@@ -7,7 +7,7 @@
 </head>
 <body>
     <div id="login">
-        <form name= 'loginForm' action="http://127.0.0.1:5000/users/login" method="post" onsubmit="return validateForm()">
+        <form name= 'loginForm' action="{{url_for('user_route.login_state')}}" method="post" onsubmit="return validateForm()">
             <div class="title">欢迎登陆</div>
             <div class="info">
                 <div class="user">
@@ -20,7 +20,7 @@
                 </div>
                 <div class="bth">
                     <input type="button" value="登录" onclick="validateAndSubmit()">
-                    <input type="button" value="注册" onclick="window.location.href='http://127.0.0.1:5000/users/register'">
+                    <input type="button" value="注册" onclick="goToRegister()">
                 </div>
             </div>
         </form>
@@ -36,7 +36,11 @@
                 document.forms["loginForm"].submit();
             }
         }
-
+        function goToRegister() {
+        let registerUrl = "{{ url_for('user_route.register') }}"
+        // 使用JavaScript变量registerUrl来跳转到注册页面
+        window.location.href = registerUrl;
+    }
     </script>
 </body>
 </html>

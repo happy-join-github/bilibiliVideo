@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>注册</title>
-    <!-- 选用改动css文件路径 -->
-    
-<!--    <link rel="stylesheet" href="../static/css/register.css">  &lt;!&ndash; 测试环境 &ndash;&gt;-->
      <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">  <!--生产环境-->
 </head>
 <body>
-<form id="regfrom" name="regfrom" action="http://127.0.0.1:5000/users/checkstate" method="post">
+<form id="regfrom" name="regfrom" action="{{ url_for('user_route.checkstate') }}" method="post">
     <table>
         <thead>
             <th colspan="2">欢迎注册</th>
@@ -29,7 +26,6 @@
                 <td><div>确认密码:</div><input type="password" name="entrypwd" id="entrypwd"></td>
             </tr>
         </tbody>
-
 
         <tr>
             <td>
@@ -54,14 +50,15 @@ function register() {
         alert('两次输入的密码不正确');
         return;
     }
-
+    let url = "{{url_for('user_route.checkstate')}}"
+    console.log(url)
     // 使用fetch发送POST请求
-    fetch('http://127.0.0.1:5000/users/checkstate', {
+    fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({username: username, pwd: pwd}),
+        body: JSON.stringify({username: username, pwd: pwd,nickname:showname}),
     })
     .then(response => {
         if (!response.ok) {

@@ -3,35 +3,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            width: 1680px;
-            height: 1080px;
-            background-color: aliceblue;
-        }
-        .scroll-text {
-            width: 200px;
-            height: 100px;
-            margin: 0 auto;
-            font-size: 20px;
-            font-weight: 700;
-            text-align: center;
-            line-height: 100px;
-            color: #fff;
-            background-color: #000;
-            border-radius: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
 </head>
 <body>
-    
-    <div class="scroll-text">欢迎使用本下载器</div>
-    <div>
-        
+    <div class="scroll-text">
+        欢迎{{username}}使用本下载器
     </div>
+    <div class="videoUrl">
+        <span>视频地址：</span>
+        <textarea id="videoUrl" cols="30" rows="10" placeholder="请输入视频地址" spellcheck="false"></textarea>
+    </div>
+    
+    <div class="cookies">
+        <textarea name="cookies" id="cookiesContent" cols="100" rows="10" placeholder="请输入cookies" spellcheck="false"></textarea>
+        <a href="{{url_for('routes.explain')}}" target="_blank">cookies说明</a>
+    </div>
+    <div class="state">
+        <div class="stateCode">200</div>
+        <div class="explainCode">OK</div>
+        <button id="request">请求</button>
+    </div>
+    <div class="DownloadSection">
+        <button id="download">下载</button>
+        <span>下载进度：0%</span>
+    </div>
+    <div class="footer">
+        <p>版本信息 2.0.0 作者：BearBabay 联系方式：a2431242530</p>
+    </div>
+    <script>
+        
+    </script>
 </body>
-<script>
-    
-    
-</script>
 </html>

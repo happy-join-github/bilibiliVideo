@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <th>
+            <td colspan="2">cookies获取说明</td>
+        </th>
+
+        <tr>
+            <td>1. 什么是cookie?</td>
+            <td>cookie是服务器发送到用户浏览器并保存在本地的小型文本文件，它包含了用户的一些信息，cookie是网站为了辨别用户身份、进行session跟踪而存储在用户本地终端上的数据。</td>
+        </tr>
+        <tr>
+            <td>2. 如何获取cookie?</td>
+            <td>cookie是通过HTTP请求头来获取的，当用户访问网站时，服务器会在HTTP响应头中发送cookie信息，浏览器会自动将cookie信息保存在本地，并在下次访问时携带上。</td>
+        </tr>
+        <tr>
+            <td>3. 如何获取bilibili cookie?</td>
+            <td>登录哔哩哔哩后，在控制台输入document.cookie可以看到cookie信息</td>
+        </tr>
+        <tr>
+            <td colspan="2"><img src="{{url_for('static',filename='imgs/result.png')}}"></td>
+        </tr>
+    </table>
+</body>
+</html>
